@@ -17,6 +17,7 @@ function LoginPage() {
       localStorage.setItem('taxnova_user', JSON.stringify(result.user));
       setStatus({ type: 'success', message: `Welcome back, ${result.user.name}!` });
       // The dashboard will use this token as: Authorization: Bearer <token>.
+      window.location.href = 'dashboard.html';
     } catch (error) {
       setStatus({ type: 'error', message: error.message === 'Failed to fetch' ? 'Could not reach the API. Start the backend on port 3000.' : error.message });
     } finally { setIsSubmitting(false); }

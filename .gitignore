@@ -1,8 +1,23 @@
+# Dependencies
 node_modules/
+
+# Environment variables
 .env
-.vscode/
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# Build files
 dist/
 build/
-coverage/
-npm-debug.log
+
+# Operating system files
 .DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
